@@ -20,6 +20,8 @@
 	wot = log --date=format:'%d %b, %Y' --pretty='%n%C(yellow bold)📅️ %ad%Creset by (%C(green bold)%an%Creset) %C(cyan bold)%h%Creset' --graph -L
 	# top 10 most edited files (most actively edited files)
 	top10 = ! git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -10
+	# top n most edited files: git top 20
+	top = ! git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -n
 
 [merge]
 	tool = vscode
